@@ -21,6 +21,7 @@ public class Philosopher implements Runnable {
                 Thread.sleep((long) (Math.random()*100));
                 synchronized (leftFork) {
                     // Filósofo pega o garfo da esquerda;
+                    doAction(": Picked up the left fork")
                     synchronized (rightFork) {
                         // Filósofo pega o garfo da direita e come
                         doAction(": Picked up both forks - eating");
